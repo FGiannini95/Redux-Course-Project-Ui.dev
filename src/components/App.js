@@ -6,6 +6,7 @@ import { Dashboard } from "./Dashboard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AddPoll } from "./AddPoll";
 import { Navbar } from "./Navbar";
+import { Poll } from "./Poll";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/add" element={<AddPoll />} />
+            <Route path="/polls/:id" element={<Poll />} />
           </Routes>
         )}
       </div>

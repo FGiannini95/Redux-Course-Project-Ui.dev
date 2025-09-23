@@ -45,7 +45,7 @@ export const Dashboard = () => {
       <ul className="dashboard-list">
         {questions[list].map((poll) => (
           <li key={poll.id}>
-            <Link to={`polls/${poll.id}`}>{poll.question}</Link>
+            <Link to={`/polls/${poll.id}`}>{poll.question}</Link>
           </li>
         ))}
       </ul>
