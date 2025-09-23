@@ -3,8 +3,9 @@ import { handleInitialData } from "../actions/shared";
 import { useSelector, useDispatch } from "react-redux";
 import { Leaderboard } from "./Leaderboard";
 import { Dashboard } from "./Dashboard";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Poll } from "./Poll";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AddPoll } from "./AddPoll";
+import { Navbar } from "./Navbar";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -19,7 +20,16 @@ export default function App() {
 
   return (
     <Router>
-      <div className="container">{loading === true ? null : <Poll />}</div>
+      <div className="container">
+        <Navbar />
+        {!loading && (
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/add" element={<AddPoll />} />
+          </Routes>
+        )}
+      </div>
     </Router>
   );
 }
