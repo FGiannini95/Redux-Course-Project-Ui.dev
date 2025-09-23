@@ -1,4 +1,3 @@
-import React from "react";
 import { handleAddAnswer } from "../actions/answers";
 import { getPercentage, getTextKeys, getVoteKeys } from "../utils/helpers";
 import { useParams } from "react-router-dom";

@@ -1,16 +1,15 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   return (
     <nav className="nav">
-      <NavLink to="/" exact activeClassName="active">
+      <NavLink to="/" activeClassName="active">
         Home
       </NavLink>
-      <NavLink to="/leaderboard" exact activeClassName="active">
+      <NavLink to="/leaderboard" activeClassName="active">
         Leaderboard
       </NavLink>
-      <NavLink to="/add" exact activeClassName="active">
+      <NavLink to="/add" activeClassName="active">
         Add poll
       </NavLink>
     </nav>

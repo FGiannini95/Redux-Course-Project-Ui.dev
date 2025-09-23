@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 
 export const Leaderboard = () => {
@@ -16,8 +15,6 @@ export const Leaderboard = () => {
       };
     })
     .sort((a, b) => b.polls + b.answers - (a.polls + a.answers));
-
-  console.log("sorted", sorted);
 
   return (
     <ul>

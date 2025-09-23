@@ -16,9 +16,6 @@ export default function App() {
     dispatch(handleInitialData());
   }, [dispatch]);
 
-  const store = useSelector((store) => store);
-  console.log("store: ", store);
-
   return (
     <Router>
       <div className="container">
