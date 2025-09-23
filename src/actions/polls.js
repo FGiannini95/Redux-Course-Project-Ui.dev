@@ -24,7 +24,7 @@ export function handleAddPoll(poll) {
   return (dispatch, getState) => {
     const { authedUser } = getState();
 
-    dispatch(showLoading);
+    dispatch(showLoading());
 
     return savePoll({
       ...poll,
