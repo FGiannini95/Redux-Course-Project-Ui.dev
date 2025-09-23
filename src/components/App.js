@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Leaderboard } from "./Leaderboard";
 import { Dashboard } from "./Dashboard";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Poll } from "./Poll";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ export default function App() {
 
   return (
     <Router>
-      <div className="container">{loading === true ? null : <Dashboard />}</div>
+      <div className="container">{loading === true ? null : <Poll />}</div>
     </Router>
   );
 }
