@@ -1,6 +1,7 @@
 import * as React from "react";
 import { handleInitialData } from "../actions/shared";
 import { useSelector, useDispatch } from "react-redux";
+import { Leaderboard } from "./Leaderboard";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -14,8 +15,6 @@ export default function App() {
   console.log("store: ", store);
 
   return (
-    <div className="container">
-      {loading === true ? null : <div>Redux Polls</div>}
-    </div>
+    <div className="container">{loading === true ? null : <Leaderboard />}</div>
   );
 }
