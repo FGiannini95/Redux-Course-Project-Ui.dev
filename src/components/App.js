@@ -2,6 +2,8 @@ import * as React from "react";
 import { handleInitialData } from "../actions/shared";
 import { useSelector, useDispatch } from "react-redux";
 import { Leaderboard } from "./Leaderboard";
+import { Dashboard } from "./Dashboard";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -15,6 +17,8 @@ export default function App() {
   console.log("store: ", store);
 
   return (
-    <div className="container">{loading === true ? null : <Leaderboard />}</div>
+    <Router>
+      <div className="container">{loading === true ? null : <Dashboard />}</div>
+    </Router>
   );
 }
